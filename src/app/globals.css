@@ -24,3 +24,39 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ========== Achievement badge animations (SVG) ========== */
+@keyframes badgeDraw {
+  0% {
+    stroke-dashoffset: 300;
+    opacity: 0.2;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.badgeMedal .badgeStroke {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  transition: opacity 200ms ease;
+}
+
+.badgeMedal.badgeLit .badgeStroke {
+  animation: badgeDraw 900ms ease-out;
+}
+
+.badgeMedal .badgeDim {
+  opacity: 0.25;
+  transition: opacity 200ms ease;
+}
+
+.badgeMedal.badgeLit .badgeDim {
+  opacity: 0.7;
+}
