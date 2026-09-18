@@ -1,0 +1,10 @@
+import Animation from "./Animation.jsx";
+import Theory from "./Theory.jsx";
+
+export const topicP101 = {
+  id: "p101",
+  layout: "immersive",
+  Animation,
+  Theory,
+  // Quiz 未指定 -> 使用通用 DynamicQuiz（读取 public/p101/quiz.json）
+};

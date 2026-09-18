@@ -1,5 +1,10 @@
 import DynamicTheory from "./components/DynamicTheory.jsx";
 import DynamicQuiz from "./components/DynamicQuiz.jsx";
+import { topicP101 } from "./p101/index.jsx";
+import { topicP102 } from "./p102/index.jsx";
+import { topicP103 } from "./p103/index.jsx";
+import { topicP104 } from "./p104/index.jsx";
+import { topicP201 } from "./p201/index.jsx";
 import { topicP401 } from "./p401/index.jsx";
 import { topicP402 } from "./p402/index.jsx";
 
@@ -17,7 +22,13 @@ import { topicP402 } from "./p402/index.jsx";
  * - "immersive"：顶栏 + 主区；有 Animation 则全宽动画，否则渲染 Page（或默认说明页）
  */
 const registry = {
-  p401: topicP401, p402: topicP402,
+  p101: topicP101,
+  p102: topicP102,
+  p103: topicP103,
+  p104: topicP104,
+  p201: topicP201,
+  p401: topicP401,
+  p402: topicP402
 };
 
 export function resolveTopicContent(topicId) {
